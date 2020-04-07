@@ -31,7 +31,7 @@ public class RubyController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = rigidbody2d.position;
-        position.x = position.x + speed * horizontal * Time.deltaTime; 
+        position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
@@ -52,8 +52,10 @@ public class RubyController : MonoBehaviour
     {
         if (amount < 0)
         {
-            if (isInvincible) 
+            if (isInvincible)
+            {
                 return;
+            }
 
             isInvincible = true;
             invincibleTimer = timeInvincible;
@@ -64,7 +66,7 @@ public class RubyController : MonoBehaviour
 
     }
 
-   
 
-    
+
+
 }
